@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #111827;
+  color: white;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background: #1f2937;
+  padding: 25px;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar li:hover {
+  background: #374151;
+}
+
+.content {
+  flex: 1;
+  padding: 40px;
+}
+
+.cards {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  flex: 1;
+  background: #1f2937;
+  padding: 25px;
+  border-radius: 15px;
+}
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+.sidebar a.active {
+  color: #60a5fa;
+  font-weight: bold;
+}

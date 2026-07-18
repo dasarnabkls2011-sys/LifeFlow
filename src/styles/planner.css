@@ -1,0 +1,162 @@
+.task-item{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:18px;
+    background:#1f2937;
+    margin:15px 0;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.task-item:hover{
+    transform:translateY(-4px);
+}
+
+.done{
+    text-decoration:line-through;
+    opacity:.5;
+}
+
+.priority{
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.high{
+    background:#dc2626;
+}
+
+.medium{
+    background:#f59e0b;
+}
+
+.low{
+    background:#10b981;
+}
+
+.critical{
+    background:#7c3aed;
+}
+.add-task{
+    display:flex;
+    gap:12px;
+    margin:25px 0;
+}
+
+.add-task input{
+    flex:1;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    font-size:16px;
+}
+
+.add-task button{
+    padding:14px 22px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    background:#2563eb;
+    color:white;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.add-task button:hover{
+    background:#1d4ed8;
+}
+.delete-btn{
+
+    background:#ef4444;
+    color:white;
+    border:none;
+    border-radius:10px;
+    padding:8px 12px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+.delete-btn:hover{
+
+    background:#dc2626;
+    transform:scale(1.05);
+
+}
+.priority {
+    padding: 4px 10px;
+    border-radius: 20px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .priority.high {
+    background: #ef4444;
+  }
+  
+  .priority.medium {
+    background: #f59e0b;
+  }
+  
+  .priority.low {
+    background: #22c55e;
+  }
+  
+  select {
+    padding: 10px;
+    border-radius: 8px;
+    margin: 0 10px;
+    border: none;
+  }
+  .task-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #1f2937;
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 12px;
+  }
+  
+  .task-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .done {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
+  .priority {
+    width: fit-content;
+    margin-top: 6px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .priority.high {
+    background: #ef4444;
+  }
+  
+  .priority.medium {
+    background: #f59e0b;
+  }
+  
+  .priority.low {
+    background: #22c55e;
+  }
+  
+  .due-date {
+    margin-top: 6px;
+    font-size: 13px;
+    color: #9ca3af;
+  }

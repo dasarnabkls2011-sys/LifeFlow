@@ -1,0 +1,67 @@
+.recent-notes{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.notes-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.note-item{
+
+    background:#f7f9fc;
+
+    border-radius:15px;
+
+    padding:15px;
+
+    transition:.25s;
+
+    cursor:pointer;
+
+}
+
+.note-item:hover{
+
+    transform:translateY(-3px);
+
+    background:#edf4ff;
+
+}
+
+.note-item h4{
+
+    margin:0 0 8px;
+
+}
+
+.note-item p{
+
+    margin:0;
+
+    color:#666;
+
+}
+
+.empty{
+
+    text-align:center;
+
+    color:#888;
+
+    padding:35px 0;
+
+}
