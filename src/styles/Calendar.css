@@ -1,0 +1,280 @@
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.calendar-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calendar-title h1 {
+    margin: 0;
+    font-size: 34px;
+}
+
+.calendar-title span {
+    color: #777;
+    font-size: 17px;
+}
+
+.calendar-nav-btn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 22px;
+    background: #f5f7fb;
+    transition: 0.2s;
+}
+
+.calendar-nav-btn:hover {
+    background: #e8eefc;
+}
+
+/* ===================== */
+
+.calendar-grid {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.weekday {
+    padding: 14px 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: #2563eb;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ===================== */
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.calendar-empty {
+    min-height: 110px;
+}
+
+/* ===================== */
+
+.calendar-day {
+    width: 100%;
+    min-height: 110px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 15px;
+
+    background: #f5f7fb;
+    color: #1f2937;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    padding: 10px;
+    box-sizing: border-box;
+
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.calendar-day:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,.08);
+}
+
+.day-number {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+/* ===================== */
+
+.today {
+    background: #2563eb;
+    color: white;
+}
+
+.other-month {
+    background: #eef2f7;
+    color: #9ca3af;
+    opacity: .7;
+}
+
+.other-month:hover {
+    opacity: 1;
+}
+
+/* ===================== */
+
+.event-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.event-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.event-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #3b82f6;
+    flex-shrink: 0;
+}
+
+.event-title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* ===================== */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+.event-modal {
+    width: 420px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.event-modal input,
+.event-modal textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.event-modal button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background: #ef4444;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+}
+/* ===== WEEKDAY HEADER ===== */
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 18px;
+}
+
+.weekday {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 40px;
+
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #2563eb !important;
+}
+
+/* ===== DAY CELLS ===== */
+
+.calendar-day {
+    color: #1f2937 !important;
+}
+
+.calendar-day .day-number {
+    color: #1f2937 !important;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.today {
+    background: #2563eb;
+    color: white !important;
+}
+
+.today .day-number {
+    color: white !important;
+}
+
+/* ===== OTHER MONTH ===== */
+
+.other-month {
+    background: #eef2f7;
+    color: #9ca3af !important;
+    opacity: 0.7;
+}
+
+.other-month .day-number {
+    color: #9ca3af !important;
+}
+
+/* ===== EVENTS ===== */
+
+.event-title {
+    color: inherit;
+}
+
+.event-dot {
+    background: #3b82f6;
+}

@@ -1,0 +1,362 @@
+.content{
+    padding:40px;
+}
+
+.focus-page{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+.focus-heading{
+    margin:0;
+    font-size:38px;
+}
+
+.focus-layout{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:25px;
+}
+
+.focus-main,
+.focus-side,
+.focus-bottom{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.focus-bottom{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+}
+
+.focus-timer,
+.goal-progress,
+.focus-stats,
+.ambient-sounds,
+.focus-quote,
+.session-history{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
+
+}
+
+/* TIMER */
+
+.timer-display{
+
+    font-size:72px;
+
+    font-weight:700;
+
+    text-align:center;
+
+    margin:30px 0;
+
+    color:#2563eb !important;
+
+}
+
+.timer-controls,
+.preset-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+.timer-controls button,
+.preset-buttons button{
+
+    padding:12px 22px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+}
+
+/* GOAL */
+
+.progress-bar{
+
+    width:100%;
+
+    height:18px;
+
+    background:#e5e7eb;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+    margin:15px 0;
+
+}
+
+.progress-fill{
+
+    height:100%;
+
+    background:#2563eb;
+
+    width:0%;
+
+    transition:.3s;
+
+}
+
+/* STATS */
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:15px;
+
+}
+
+.stat-box{
+
+    background:#f5f7fb;
+
+    border-radius:14px;
+
+    padding:18px;
+
+    text-align:center;
+
+}
+
+/* AMBIENT */
+
+.sound-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:12px;
+
+}
+
+.sound-grid button{
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+}
+
+/* QUOTE */
+
+.focus-quote p{
+
+    font-size:18px;
+
+    font-style:italic;
+
+}
+
+/* HISTORY */
+
+.session-history{
+
+    min-height:180px;
+
+}
+/* ===== TEXT COLORS ===== */
+
+.focus-timer h2,
+.goal-progress h2,
+.focus-stats h2,
+.ambient-sounds h2,
+.focus-quote h2,
+.session-history h2 {
+
+    color: #1f2937;
+    margin-bottom: 18px;
+
+}
+
+.focus-timer p,
+.goal-progress p,
+.focus-stats p,
+.ambient-sounds p,
+.focus-quote p,
+.session-history p {
+
+    color: #4b5563;
+
+}
+
+.stat-box h3 {
+
+    color: #374151;
+    margin-bottom: 8px;
+
+}
+
+.stat-box p {
+
+    color: #2563eb;
+    font-size: 22px;
+    font-weight: 700;
+
+}
+
+.sound-grid button {
+
+    background: #f5f7fb;
+    color: #1f2937;
+    font-weight: 600;
+    transition: .25s;
+
+}
+
+.sound-grid button:hover {
+
+    background: #2563eb;
+    color: white;
+
+}
+
+.timer-controls button,
+.preset-buttons button {
+
+    background: #2563eb;
+    color: white;
+    font-weight: 600;
+
+}
+
+.timer-controls button:hover,
+.preset-buttons button:hover {
+
+    background: #1d4ed8;
+
+}
+
+.progress-bar {
+
+    background: #dbeafe;
+
+}
+
+.progress-fill {
+
+    background: linear-gradient(90deg, #2563eb, #60a5fa);
+
+}
+/* ===== Focus Toast ===== */
+
+.focus-toast{
+
+    position:fixed;
+
+    top:30px;
+
+    right:30px;
+
+    width:320px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    padding:18px;
+
+    border-radius:18px;
+
+    background:white;
+
+    border:1px solid #dbeafe;
+
+    box-shadow:0 18px 45px rgba(37,99,235,.18);
+
+    animation:toastSlide .45s ease;
+
+    z-index:9999;
+
+}
+
+.toast-icon{
+
+    width:56px;
+
+    height:56px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:26px;
+
+}
+
+.focus-toast h3{
+
+    margin:0;
+
+    color:#111827;
+
+}
+
+.focus-toast p{
+
+    margin-top:6px;
+
+    color:#6b7280;
+
+}
+
+@keyframes toastSlide{
+
+    from{
+
+        transform:translateX(100px);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:translateX(0);
+
+        opacity:1;
+
+    }
+
+}
