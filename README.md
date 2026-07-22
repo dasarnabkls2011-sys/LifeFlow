@@ -51,7 +51,7 @@ A digital notebook inspired by physical notebooks. This section is currently und
 Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/LifeFlow.git
+git clone https://github.com/dasarnabkls2011-sys/LifeFlow.git
 ```
 
 Install dependencies
