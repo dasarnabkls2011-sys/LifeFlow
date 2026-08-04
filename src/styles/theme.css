@@ -1,0 +1,145 @@
+:root{
+
+    /* Colors */
+  
+    --sky:#dff7ff;
+    --sky-light:#f5fdff;
+  
+    --blue:#5bc7ff;
+    --blue-dark:#2196f3;
+  
+    --green:#74d15d;
+  
+    --glass:
+    rgba(255,255,255,.72);
+  
+    --glass-dark:
+    rgba(255,255,255,.9);
+  
+    --text:#16324f;
+  
+    --shadow:
+    0 12px 35px rgba(0,140,255,.18);
+  
+    --shadow-hover:
+    0 18px 40px rgba(0,140,255,.28);
+  
+    --radius:22px;
+  
+  }
+  .glass-card{
+
+    background:
+  
+    linear-gradient(
+  
+      180deg,
+  
+      rgba(255,255,255,.95),
+  
+      rgba(255,255,255,.72)
+  
+    );
+  
+    backdrop-filter:blur(15px);
+  
+    border:
+  
+    1px solid rgba(255,255,255,.8);
+  
+    border-radius:var(--radius);
+  
+    box-shadow:var(--shadow);
+  
+  }
+  .aero-btn{
+
+    border:none;
+  
+    border-radius:18px;
+  
+    padding:12px 22px;
+  
+    cursor:pointer;
+  
+    color:white;
+  
+    font-weight:600;
+  
+    background:
+  
+    linear-gradient(
+  
+      #7edcff,
+  
+      #2ca8ff
+  
+    );
+  
+    transition:.25s;
+  
+  }
+  
+  .aero-btn:hover{
+  
+    transform:
+  
+    translateY(-3px);
+  
+    box-shadow:
+  
+    var(--shadow-hover);
+  
+  }
+  .aero-input{
+
+    padding:12px;
+  
+    border-radius:16px;
+  
+    border:
+  
+    1px solid rgba(255,255,255,.8);
+  
+    background:
+  
+    rgba(255,255,255,.88);
+  
+    outline:none;
+  
+    transition:.25s;
+  
+  }
+  
+  .aero-input:focus{
+  
+    border-color:var(--blue);
+  
+    box-shadow:
+  
+    0 0 15px rgba(44,168,255,.25);
+  
+  }
+  .aero-badge{
+
+    display:inline-block;
+  
+    padding:6px 12px;
+  
+    border-radius:999px;
+  
+    background:
+  
+    linear-gradient(
+  
+      #9fe98d,
+  
+      #74d15d
+  
+    );
+  
+    color:white;
+  
+    font-size:13px;
+  
+  }

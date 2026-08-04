@@ -1,0 +1,62 @@
+.greeting-card{
+
+    background:
+    linear-gradient(
+        180deg,
+        rgba(255,255,255,.94),
+        rgba(255,255,255,.74)
+    );
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.85);
+
+    border-radius:28px;
+
+    padding:30px;
+
+    margin-bottom:30px;
+
+    box-shadow:0 12px 35px rgba(70,175,255,.18);
+
+}
+
+.greeting-card h1{
+
+    font-size:2.6rem;
+
+    color:#168bff;
+
+    margin-bottom:10px;
+
+    font-weight:700;
+
+}
+
+.greeting-text{
+
+    color:#456b89;
+
+    font-size:18px;
+
+    margin-bottom:15px;
+
+}
+
+.greeting-date{
+
+    display:inline-block;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    background:rgba(120,210,255,.18);
+
+    color:#35739d;
+
+    font-size:14px;
+
+    font-weight:500;
+
+}

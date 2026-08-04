@@ -6,53 +6,83 @@ function HabitProgress() {
     JSON.parse(localStorage.getItem("habits")) || [];
 
   return (
-    <div className="habit-progress">
+
+    <section className="habit-progress">
 
       <div className="card-header">
-        <h2>🔥 Habit Progress</h2>
+
+        <div>
+
+          <h2>🌱 Habit Progress</h2>
+
+          <p className="card-subtitle">
+            Keep your streak alive.
+          </p>
+
+        </div>
+
       </div>
 
       {habits.length === 0 ? (
 
-        <p className="empty">
-          No habits yet.
-        </p>
+        <div className="empty">
+
+          <div className="empty-icon">
+            🌿
+          </div>
+
+          <h3>No Habits Yet</h3>
+
+          <p>
+            Start building healthy routines today.
+          </p>
+
+        </div>
 
       ) : (
 
-        habits.slice(0,5).map((habit,index)=>(
+        <div className="habit-list">
 
-          <div
-            key={index}
-            className="habit-row"
-          >
+          {habits.slice(0, 5).map((habit, index) => (
 
-            <div className="habit-top">
+            <div
+              key={index}
+              className="habit-row"
+            >
 
-              <span>{habit.name}</span>
+              <div className="habit-top">
 
-              <span>{habit.streak} 🔥</span>
+                <span className="habit-name">
+                  {habit.name}
+                </span>
+
+                <span className="habit-streak">
+                  🔥 {habit.streak}
+                </span>
+
+              </div>
+
+              <div className="progress">
+
+                <div
+                  className="progress-fill"
+                  style={{
+                    width: `${Math.min(habit.streak * 10, 100)}%`
+                  }}
+                />
+
+              </div>
 
             </div>
 
-            <div className="progress">
+          ))}
 
-              <div
-                className="progress-fill"
-                style={{
-                  width: `${Math.min(habit.streak*10,100)}%`
-                }}
-              />
-
-            </div>
-
-          </div>
-
-        ))
+        </div>
 
       )}
 
-    </div>
+    </section>
+
   );
 
 }

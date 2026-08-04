@@ -360,3 +360,59 @@
     }
 
 }
+.history-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    margin-top:15px;
+
+}
+
+.history-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:12px 15px;
+
+    background:#f5f7fb;
+
+    border-radius:12px;
+
+}
+
+.history-item strong{
+
+    color:#2563eb;
+
+}
+
+.history-item span{
+
+    color:#6b7280;
+
+    font-size:14px;
+
+}
+.active-sound{
+
+    background:#2563eb !important;
+
+    color:white !important;
+
+    transform:scale(1.05);
+
+}
+
+.sound-grid button{
+
+    transition:.25s;
+
+}

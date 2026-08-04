@@ -5,9 +5,13 @@ import FocusToast from "./FocusToast";
 // =======================
 // Developer Mode
 // =======================
-const DEV_MODE = true; // Change to false before release
+const DEV_MODE = false; 
 
-function FocusTimer() {
+function FocusTimer({
+
+  onSessionComplete,
+
+}) {
 
   const DEFAULT_SESSION = 25;
 
@@ -18,9 +22,15 @@ function FocusTimer() {
   );
 
   const [running, setRunning] = useState(false);
+
   const [showToast, setShowToast] = useState(false);
 
   function completeSession() {
+    if (onSessionComplete) {
+
+      onSessionComplete();
+    
+    }
 
     const data = getFocusData();
 
@@ -38,7 +48,9 @@ function FocusTimer() {
     setShowToast(true);
 
     setTimeout(() => {
+
       setShowToast(false);
+
     }, 3000);
 
   }
@@ -53,21 +65,27 @@ function FocusTimer() {
 
       completeSession();
 
+      setTimeLeft(
+        DEV_MODE ? 5 : sessionLength * 60
+      );
+
       return;
 
     }
 
     const timer = setTimeout(() => {
 
-      setTimeLeft((prev) => prev - 1);
+      setTimeLeft(prev => prev - 1);
 
     }, 1000);
 
     return () => clearTimeout(timer);
 
-  }, [running, timeLeft]);
+  }, [running, timeLeft, sessionLength]);
 
   function startTimer() {
+
+    if (running) return;
 
     setRunning(true);
 
@@ -83,6 +101,8 @@ function FocusTimer() {
 
     setRunning(false);
 
+    setShowToast(false);
+
     setTimeLeft(
       DEV_MODE ? 5 : sessionLength * 60
     );
@@ -93,6 +113,8 @@ function FocusTimer() {
 
     setRunning(false);
 
+    setShowToast(false);
+
     setSessionLength(min);
 
     setTimeLeft(
@@ -102,6 +124,7 @@ function FocusTimer() {
   }
 
   const minutes = Math.floor(timeLeft / 60);
+
   const seconds = timeLeft % 60;
 
   return (
@@ -154,9 +177,14 @@ function FocusTimer() {
       </div>
 
       <FocusToast
-  show={showToast}
-  minutes={DEV_MODE ? "5 seconds" : `${sessionLength} minutes`}
-/>
+        show={showToast}
+        minutes={
+          DEV_MODE
+            ? `${sessionLength} minute session (tested in 5s)`
+            : `${sessionLength} minutes`
+        }
+      />
+
     </div>
 
   );

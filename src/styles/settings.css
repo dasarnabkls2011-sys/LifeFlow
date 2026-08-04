@@ -1,0 +1,200 @@
+.content{
+    padding:40px;
+}
+
+/* PAGE */
+
+.settings-page{
+
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+
+}
+
+.settings-heading{
+
+    margin:0;
+    font-size:38px;
+    font-weight:700;
+    color:#1f2937;
+
+}
+
+/* CARD */
+
+.settings-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+/* TITLES */
+
+.settings-card h2{
+
+    margin:0 0 8px 0;
+
+    color:#1f2937;
+
+    font-size:24px;
+
+}
+
+/* LABELS */
+
+.settings-card label{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#4b5563;
+
+}
+
+/* INPUTS */
+
+.settings-card input[type="text"],
+.settings-card input[type="number"]{
+
+    width:100%;
+
+    padding:12px 15px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.25s;
+
+    box-sizing:border-box;
+
+}
+
+.settings-card input[type="text"]:focus,
+.settings-card input[type="number"]:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+
+}
+
+/* CHECKBOX */
+
+.settings-card input[type="checkbox"]{
+
+    margin-right:10px;
+
+    transform:scale(1.15);
+
+    cursor:pointer;
+
+}
+
+/* BUTTONS */
+
+.settings-card button{
+
+    padding:12px 18px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.settings-card button:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+}
+
+/* DANGER BUTTON */
+
+.settings-card .danger{
+
+    background:#ef4444;
+
+}
+
+.settings-card .danger:hover{
+
+    background:#dc2626;
+
+}
+
+/* ABOUT */
+
+.settings-card p{
+
+    margin:0;
+
+    color:#6b7280;
+
+    line-height:1.6;
+
+}
+
+/* BUTTON GROUPS */
+
+.settings-card button + button{
+
+    margin-top:10px;
+
+}
+
+/* RESPONSIVE */
+
+@media (max-width:768px){
+
+    .content{
+
+        padding:20px;
+
+    }
+
+    .settings-heading{
+
+        font-size:30px;
+
+    }
+
+    .settings-card{
+
+        padding:20px;
+
+    }
+
+}

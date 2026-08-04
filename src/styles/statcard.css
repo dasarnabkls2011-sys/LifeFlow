@@ -1,0 +1,141 @@
+.stat-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:24px;
+
+    border-radius:26px;
+
+    background:
+
+    linear-gradient(
+
+        180deg,
+
+        rgba(255,255,255,.95),
+
+        rgba(255,255,255,.75)
+
+    );
+
+    backdrop-filter:blur(18px);
+
+    border:
+
+    1px solid rgba(255,255,255,.85);
+
+    box-shadow:
+
+    0 14px 35px rgba(66,170,255,.18);
+
+    transition:.3s;
+
+}
+
+.stat-card:hover{
+
+    transform:
+
+    translateY(-8px);
+
+    box-shadow:
+
+    0 20px 45px rgba(66,170,255,.30);
+
+}
+
+.stat-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.stat-icon{
+
+    width:62px;
+
+    height:62px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    font-size:30px;
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        #ffffff,
+
+        #89dcff
+
+    );
+
+    box-shadow:
+
+    0 0 22px rgba(89,198,255,.35);
+
+}
+
+.stat-card h3{
+
+    margin-top:18px;
+
+    font-size:15px;
+
+    color:#4f7290;
+
+    font-weight:500;
+
+}
+
+.stat-card h2{
+
+    margin-top:8px;
+
+    font-size:34px;
+
+    color:#1a89ff;
+
+    font-weight:700;
+
+}
+
+.stat-glow{
+
+    position:absolute;
+
+    right:-70px;
+
+    bottom:-70px;
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+        rgba(120,220,255,.30),
+
+        transparent 70%
+
+    );
+
+}

@@ -1,6 +1,7 @@
 import "../styles/RecentNotes.css";
 
 function RecentNotes() {
+
   const pages =
     JSON.parse(localStorage.getItem("notebook")) || [];
 
@@ -9,19 +10,44 @@ function RecentNotes() {
     .slice(0, 5);
 
   return (
-    <div className="recent-notes">
+
+    <section className="recent-notes">
 
       <div className="card-header">
-        <h2>📖 Recent Notes</h2>
 
-        <span>{notes.length} Notes</span>
+        <div>
+
+          <h2>📖 Recent Notes</h2>
+
+          <p className="card-subtitle">
+            Your latest ideas and thoughts
+          </p>
+
+        </div>
+
+        <span className="note-count">
+
+          {notes.length} Notes
+
+        </span>
+
       </div>
 
       {notes.length === 0 ? (
 
-        <p className="empty">
-          No notes yet.
-        </p>
+        <div className="empty">
+
+          <div className="empty-icon">
+            📘
+          </div>
+
+          <h3>No Notes Yet</h3>
+
+          <p>
+            Your recent notes will appear here.
+          </p>
+
+        </div>
 
       ) : (
 
@@ -34,11 +60,22 @@ function RecentNotes() {
               className="note-item"
             >
 
-              <h4>Page {page.id + 1}</h4>
+              <div className="note-top">
+
+                <h4>
+
+                  📄 Page {page.id + 1}
+
+                </h4>
+
+              </div>
 
               <p>
+
                 {page.content.substring(0, 80)}
-                {page.content.length > 80 ? "..." : ""}
+
+                {page.content.length > 80 && "..."}
+
               </p>
 
             </div>
@@ -49,8 +86,10 @@ function RecentNotes() {
 
       )}
 
-    </div>
+    </section>
+
   );
+
 }
 
 export default RecentNotes;

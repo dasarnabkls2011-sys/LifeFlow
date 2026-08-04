@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import FocusTimer from "../components/FocusTimer";
 import GoalProgress from "../components/GoalProgress";
 import FocusStats from "../components/FocusStats";
@@ -5,9 +7,22 @@ import AmbientSounds from "../components/AmbientSounds";
 import FocusQuote from "../components/FocusQuote";
 import SessionHistory from "../components/SessionHistory";
 
+import { getFocusData } from "../utils/focusStorage";
+import { getSettings } from "../utils/settingsStorage";
+
 import "../styles/focus.css";
 
 function Focus() {
+
+  const [data, setData] = useState(getFocusData());
+
+  const settings = getSettings();
+
+  function refreshFocusData() {
+
+    setData(getFocusData());
+
+  }
 
   return (
 
@@ -20,20 +35,24 @@ function Focus() {
       <div className="focus-layout">
 
         <div className="focus-main">
-          <FocusTimer />
+
+          <FocusTimer
+            onSessionComplete={refreshFocusData}
+          />
+
         </div>
 
         <div className="focus-side">
 
           <GoalProgress
-            current={0}
-            goal={180}
+            current={data.todayMinutes}
+            goal={settings.dailyGoal}
           />
 
           <FocusStats
-            today={0}
-            week={0}
-            streak={0}
+            today={data.todayMinutes}
+            week={data.weekMinutes}
+            streak={data.completedSessions}
           />
 
         </div>
@@ -48,7 +67,9 @@ function Focus() {
 
       </div>
 
-      <SessionHistory />
+      <SessionHistory
+        history={data.history}
+      />
 
     </main>
 

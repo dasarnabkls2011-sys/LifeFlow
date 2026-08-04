@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import CalendarHeader from "../components/CalendarHeader";
 import CalendarGrid from "../components/CalendarGrid";
 import EventModal from "../components/EventModal";
-import "../styles/calendar.css";
+import "../styles/Calendar.css";
 
 function Calendar() {
 
